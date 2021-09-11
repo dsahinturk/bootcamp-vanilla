@@ -1,0 +1,29 @@
+.note-list {
+    margin: 0px auto 50px;
+    height: 500px;
+    width: 1000px;
+}
+
+.note {
+    background-color: aliceblue;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-data {
+    margin: auto 0px;
+}
+
+.note-id {
+    color: brown;
+    margin-right: 30px;
+}
+
+.note + .note {
+    margin-top: 10px;
+}
+
+.buttons {
+    display: flex;
+}

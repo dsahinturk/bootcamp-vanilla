@@ -1,0 +1,9 @@
+.notes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 20px auto;
+}

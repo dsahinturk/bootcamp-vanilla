@@ -1,10 +1,10 @@
-import data from "./data";
 import {} from "./App.css";
-import Currencies from "./Currenices";
+import Notes from "./components/Notes/Notes";
+
 const App = () => {
   return (
     <div className="App">
-      <Currencies />
+      <Notes></Notes>
     </div>
   );
 }
