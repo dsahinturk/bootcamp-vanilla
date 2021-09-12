@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { noteContext } from "../../context/NoteContext";
 import Button from "../../shared/Button/Button";
 import Input from "../../shared/Input/Input";
 import {} from "./NoteInput.css"
 
-const NoteInput = ({saveNote, selectedNote}) => {
+const NoteInput = () => {
+    const {saveNote, selectedNote} = useContext(noteContext)
 
     const [value, setValue] = useState("");
     

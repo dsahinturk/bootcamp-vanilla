@@ -1,28 +1,11 @@
+import { useReducer } from "react"
 
 const useCounter = () => {
-
-    const increment = () => {
-        localStorage.setItem("id", getLSId() + 1)
-    }
-
-    const getLSId = () => {
-        if (localStorage.getItem("id")) {
-            return Number(localStorage.getItem("id"))
-        }
-    }
-
-    const setLSId = (id) => {
-        localStorage.setItem("id", id)
-    }
+    const [id, increment] = useReducer((state) => state + 1, 1)
 
     const getId = () => {
-        if (getLSId() == null) {
-            setLSId(1)
-            return getLSId()
-        } else {
-            increment()
-            return getLSId()
-        }
+        increment()
+        return id
     };
 
     return {getId}

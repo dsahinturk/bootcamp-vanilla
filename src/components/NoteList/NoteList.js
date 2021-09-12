@@ -1,9 +1,11 @@
-import { useEffect } from "react"
+import { useContext } from "react"
 import { Link } from "react-router-dom"
+import { noteContext } from "../../context/NoteContext"
 import Button from "../../shared/Button/Button"
 import {} from "./NoteList.css"
 
-const NoteList = ({ notes, deleteNote, selectNote }) => {
+const NoteList = () => {
+    const {notes, deleteNote, selectNote} = useContext(noteContext)
 
     const _selectNote = (e, id) => {
         e.preventDefault();
@@ -19,8 +21,8 @@ const NoteList = ({ notes, deleteNote, selectNote }) => {
         <div className="note-list">
             {notes?.map(note => {
                 return (
-                    <Link to={"/note/" + note.id} className="note-link">
-                        <div key={note.id} className="note">
+                    <Link to={"/note/" + note.id} key={note.id} className="note-link">
+                        <div className="note">
                             <span className="note-id">
                                 {note.id + ")"}
                             </span>
