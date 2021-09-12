@@ -3,4 +3,5 @@ button {
     background-color: gray;
     color: white;
     cursor: pointer;
+    margin-right: 5px;
 }
