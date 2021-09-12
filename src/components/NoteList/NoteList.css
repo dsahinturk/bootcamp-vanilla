@@ -9,6 +9,8 @@
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .note-data {
@@ -18,10 +20,6 @@
 .note-id {
     color: brown;
     margin-right: 30px;
-}
-
-.note + .note {
-    margin-top: 10px;
 }
 
 .buttons {

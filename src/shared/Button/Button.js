@@ -2,7 +2,7 @@ import {} from "./Button.css"
 
 const Button = ({ onClick, title }) => {
     return <span className="button">
-        <button onClick={() => onClick()}>{title}</button>
+        <button onClick={(e) => onClick(e)}>{title}</button>
     </span>
 }
 
